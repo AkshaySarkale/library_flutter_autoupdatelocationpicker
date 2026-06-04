@@ -1,18 +1,11 @@
-/// A Flutter package for automatic location picking (Country, State, City).
-library library_flutter_auto_location_picker;
+library flutter_auto_location_picker;
 
-// Models
+export 'src/services/location_service.dart';
+
 export 'src/models/country.dart';
 export 'src/models/state_model.dart';
 export 'src/models/city.dart';
 
-// Services
-export 'src/services/location_service.dart';
-
-// Widgets
-export 'src/widgets/country_dropdown.dart';
-export 'src/widgets/state_dropdown.dart';
-export 'src/widgets/city_dropdown.dart';
 export 'src/widgets/location_picker.dart';
 
 /// Standard Calculator class (Placeholder from template)
