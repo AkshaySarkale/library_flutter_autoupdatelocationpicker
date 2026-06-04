@@ -1,7 +1,7 @@
 name: library_flutter_auto_location_picker
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Excelsior-Technologies-Community/library_flutter_autoupdatelocationpicker.git
 
 environment:
   sdk: ^3.12.0

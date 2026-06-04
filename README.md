@@ -70,7 +70,7 @@ Add dependency in `pubspec.yaml`
 dependencies:
   library_flutter_auto_location_picker:
     git:
-      url: https://github.com/Excelsior-Technologies-Community/library_flutter_auto_location_picker.git
+      url: https://github.com/Excelsior-Technologies-Community/library_flutter_autoupdatelocationpicker.git
 ```
 
 ---
