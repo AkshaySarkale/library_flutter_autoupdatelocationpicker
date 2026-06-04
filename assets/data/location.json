@@ -1,0 +1,22 @@
+[
+  {
+    "name": "India",
+    "states": [
+      {
+        "name": "Gujarat",
+        "cities": [
+          {"name": "Ahmedabad"},
+          {"name": "Surat"},
+          {"name": "Vadodara"}
+        ]
+      },
+      {
+        "name": "Maharashtra",
+        "cities": [
+          {"name": "Mumbai"},
+          {"name": "Pune"}
+        ]
+      }
+    ]
+  }
+]
