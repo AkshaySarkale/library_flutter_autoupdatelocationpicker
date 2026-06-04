@@ -60,6 +60,12 @@ class LocationPicker extends StatefulWidget {
   /// Custom loading widget to show while data is being initialized.
   final Widget? loadingWidget;
 
+  /// Whether to show search functionality for the dropdowns.
+  final bool showSearch;
+
+  /// Hint text for the search field.
+  final String? searchHint;
+
   /// Creates a [LocationPicker].
   const LocationPicker({
     super.key,
@@ -79,6 +85,8 @@ class LocationPicker extends StatefulWidget {
     this.stateValidator,
     this.cityValidator,
     this.loadingWidget,
+    this.showSearch = false,
+    this.searchHint,
   });
 
   @override
@@ -141,9 +149,6 @@ class _LocationPickerState extends State<LocationPicker> {
     if (widget.onCountryChanged != null && countryName != null) {
       widget.onCountryChanged!(countryName);
     }
-    // Also notify that state and city are reset
-    if (widget.onStateChanged != null) widget.onStateChanged!('');
-    if (widget.onCityChanged != null) widget.onCityChanged!('');
   }
 
   void _onStateChanged(String? stateName) {
@@ -160,8 +165,6 @@ class _LocationPickerState extends State<LocationPicker> {
     if (widget.onStateChanged != null && stateName != null) {
       widget.onStateChanged!(stateName);
     }
-    // Also notify that city is reset
-    if (widget.onCityChanged != null) widget.onCityChanged!('');
   }
 
   void _onCityChanged(String? cityName) {
@@ -192,6 +195,8 @@ class _LocationPickerState extends State<LocationPicker> {
           enabled: widget.enabled,
           decoration: widget.decoration?.copyWith(labelText: widget.countryHint ?? 'Country'),
           validator: widget.countryValidator,
+          showSearch: widget.showSearch,
+          searchHint: widget.searchHint,
         ),
         const SizedBox(height: 16),
         StateDropdown(
@@ -202,6 +207,8 @@ class _LocationPickerState extends State<LocationPicker> {
           enabled: widget.enabled && _selectedCountry != null,
           decoration: widget.decoration?.copyWith(labelText: widget.stateHint ?? 'State'),
           validator: widget.stateValidator,
+          showSearch: widget.showSearch,
+          searchHint: widget.searchHint,
         ),
         const SizedBox(height: 16),
         CityDropdown(
@@ -212,6 +219,8 @@ class _LocationPickerState extends State<LocationPicker> {
           enabled: widget.enabled && _selectedState != null,
           decoration: widget.decoration?.copyWith(labelText: widget.cityHint ?? 'City'),
           validator: widget.cityValidator,
+          showSearch: widget.showSearch,
+          searchHint: widget.searchHint,
         ),
       ],
     );
