@@ -188,9 +188,13 @@ class _LocationPickerExampleState extends State<LocationPickerExample> {
 ---
 ## Demo
 Default locations with by default json file
+
+
 <img src="assets/demo.gif" height="300" alt="Demo GIF">
 
 Default locations with by user defined location json file
+
+
 <img src="assets/demo1.gif" height="300" alt="Demo GIF">
 
 ---
