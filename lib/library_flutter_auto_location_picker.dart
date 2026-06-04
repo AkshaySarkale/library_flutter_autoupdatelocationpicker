@@ -1,7 +1,6 @@
 library flutter_auto_location_picker;
 
 export 'src/services/location_service.dart';
-
 export 'src/models/country.dart';
 export 'src/models/state_model.dart';
 export 'src/models/city.dart';
